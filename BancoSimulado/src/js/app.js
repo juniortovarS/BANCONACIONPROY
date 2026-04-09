@@ -2,24 +2,16 @@
 function renderLogin() {
   document.getElementById('app').innerHTML = `
     <div class="login-screen">
-
       <img src="assets/fondo.png" class="logo">
-
       <div class="card">
         <input type="text" id="dni" placeholder="DNI">
         <input type="password" id="clave" placeholder="Clave de internet">
-
         <span class="link-blue">¡La olvidé!</span>
-
         <button id="loginBtn">Ingresar</button>
         <button class="btn-secondary">Generar tu clave de internet</button>
       </div>
-
       <div class="bottom-icons">
-        <div class="icon">📍</div>
-        <div class="icon">🎧</div>
       </div>
-
     </div>
   `;
 
@@ -78,7 +70,7 @@ function renderDashboard() {
         </div>
       </div>
 
-      <!-- MENÚ LATERAL PEQUEÑO -->
+      <!-- MENÚ LATERAL -->
       <div id="sidebar" class="sidebar">
         <div class="perfil">
           <div class="avatar">J</div>
@@ -103,6 +95,9 @@ function renderDashboard() {
         </ul>
       </div>
 
+      <!-- OVERLAY -->
+      <div id="overlay" class="overlay"></div>
+
     </div>
   `;
 
@@ -110,6 +105,7 @@ function renderDashboard() {
   const listaMov = document.getElementById('listaMov');
   const menuBtn = document.getElementById('menuBtn');
   const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
 
   // Toggle movimientos
   toggleMov.onclick = () => {
@@ -117,29 +113,29 @@ function renderDashboard() {
   };
 
   // Abrir / cerrar sidebar
-  let sidebarOpen = false;
   menuBtn.onclick = (e) => {
-    e.stopPropagation(); // evitar cerrar inmediatamente
-    sidebarOpen = !sidebarOpen;
-    if (sidebarOpen) {
-      sidebar.classList.add('sidebar-show');
-    } else {
-      sidebar.classList.remove('sidebar-show');
-    }
+    e.stopPropagation();
+    sidebar.classList.toggle('show');
+    overlay.classList.toggle('show');
   };
 
   // Cerrar sidebar tocando fuera
+  overlay.onclick = () => {
+    sidebar.classList.remove('show');
+    overlay.classList.remove('show');
+  };
+
   document.addEventListener('click', (e) => {
-    if (sidebarOpen && !sidebar.contains(e.target) && e.target !== menuBtn) {
-      sidebar.classList.remove('sidebar-show');
-      sidebarOpen = false;
+    if (!sidebar.contains(e.target) && e.target !== menuBtn) {
+      sidebar.classList.remove('show');
+      overlay.classList.remove('show');
     }
   });
 
   // Logout
   document.getElementById('logout').onclick = () => {
-    sidebar.classList.remove('sidebar-show');
-    sidebarOpen = false;
+    sidebar.classList.remove('show');
+    overlay.classList.remove('show');
     renderLogin();
   };
 }
