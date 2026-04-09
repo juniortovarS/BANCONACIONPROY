@@ -235,3 +235,240 @@ button.active {
     font-size: 16px;
   }
 }
+
+
+.voucher-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.voucher-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.voucher-status {
+  color: green;
+}
+
+.voucher-fecha {
+  color: #666;
+  font-size: 12px;
+}
+
+.voucher-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+.voucher-row.blue {
+  color: #0d4da0;
+}
+
+.voucher-row.transparent {
+  color: rgba(0,0,0,0.5);
+}
+
+.voucher-info {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.voucher-info.gray {
+  color: rgba(0,0,0,0.5);
+}
+
+.voucher-info.blue {
+  color: #0d4da0;
+  font-weight: bold;
+}
+
+.voucher-info.celeste {
+  color: #00ced1;
+  font-weight: bold;
+}
+
+.voucher-info.green {
+  color: #32cd32;
+  font-weight: bold;
+}
+
+.voucher-info.darkblue {
+  color: #003366;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+button#volverInicio {
+  background: #0d4da0;
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.voucher-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.voucher-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.voucher-status {
+  color: green;
+}
+
+.voucher-fecha {
+  color: #666;
+  font-size: 12px;
+}
+
+.voucher-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+.voucher-row.blue {
+  color: #0d4da0;
+}
+
+.voucher-row.transparent {
+  color: rgba(0,0,0,0.5);
+}
+
+.voucher-info {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.voucher-info.gray {
+  color: rgba(0,0,0,0.5);
+}
+
+.voucher-info.blue {
+  color: #0d4da0;
+  font-weight: bold;
+}
+
+.voucher-info.celeste {
+  color: #00ced1;
+  font-weight: bold;
+}
+
+.voucher-info.green {
+  color: #32cd32;
+  font-weight: bold;
+}
+
+.voucher-info.darkblue {
+  color: #003366;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+button#volverInicio {
+  background: #0d4da0;
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* ===== LOADER ROJO TRANSFERENCIA ===== */
+.loader-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* Fondo semitransparente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-popup.hidden {
+  display: none;
+}
+
+.loader-circle {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #f5f5f5; /* borde claro */
+  border-top: 6px solid #d90000; /* rojo intenso */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.loader-popup p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Animación giratoria */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Botón de ocultar/mostrar saldo */
+.btn-ocultar-saldo {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Movimientos toggle button */
+.movimientos-toggle-btn {
+  background: #e0e0e0;
+  border: none;
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+/* Movimientos list */
+.movimientos-list {
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
